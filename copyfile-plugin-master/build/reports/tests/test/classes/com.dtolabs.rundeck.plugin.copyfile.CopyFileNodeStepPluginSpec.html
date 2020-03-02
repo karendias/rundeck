@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.dtolabs.rundeck.plugin.copyfile.html">com.dtolabs.rundeck.plugin.copyfile</a> &gt; CopyFileNodeStepPluginSpec</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">18</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">8</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.373s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">55%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="copy recursive false with pattern **"></a>
+<h3 class="failures">copy recursive false with pattern **</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files589178770732968321, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files589178770732968321\file2.txt, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files589178770732968321\sub1\sub2\test4.blah, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files589178770732968321\sub1\test3.xml, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files589178770732968321\test1.txt], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest9099462604929616676/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive false with pattern **/test*"></a>
+<h3 class="failures">copy recursive false with pattern **/test*</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files8033475383475622453, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files8033475383475622453\sub1\sub2\test4.blah, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files8033475383475622453\sub1\test3.xml, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files8033475383475622453\test1.txt], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest8746121960165940178/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive false with pattern sub*/*"></a>
+<h3 class="failures">copy recursive false with pattern sub*/*</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files4082171211475594681, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files4082171211475594681\sub1\test3.xml], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest2478382590701244529/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive true with pattern **"></a>
+<h3 class="failures">copy recursive true with pattern **</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\file2.txt, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\sub1\sub2\test4.blah, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\sub1\test3.xml, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\test1.txt, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\sub1, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files5411637837416220165\sub1\sub2], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest5859359971869319330/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive true with pattern **/sub2"></a>
+<h3 class="failures">copy recursive true with pattern **/sub2</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files1056880802338507108, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files1056880802338507108\sub1\sub2], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest2891579355012192918/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive true with pattern **/test*"></a>
+<h3 class="failures">copy recursive true with pattern **/test*</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files6390092632388482539, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files6390092632388482539\sub1\sub2\test4.blah, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files6390092632388482539\sub1\test3.xml, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files6390092632388482539\test1.txt], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest8089144779853667405/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive true with pattern */sub2"></a>
+<h3 class="failures">copy recursive true with pattern */sub2</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files915237430484748886, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files915237430484748886\sub1\sub2], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest7438561206683043520/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="copy recursive true with pattern sub*/sub*"></a>
+<h3 class="failures">copy recursive true with pattern sub*/sub*</h3>
+<span class="code">
+<pre>Too many invocations for:
+
+0 * execSvc._(*_)   (1 invocation)
+
+Matching invocations (ordered by last occurrence):
+
+1 * execSvc.fileCopyFiles(null, C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files1160016792514031515, [C:\Users\ALAS~1.MOR\AppData\Local\Temp\CopyFileNodeStepPluginSpec-test-files1160016792514031515\sub1\sub2], 'C:\\Users\\ALAS~1.MOR\\AppData\\Local\\Temp\\CopyFileNodeStepPluginSpec-test-dest4226804562101813995/', Mock for type 'INodeEntry' named 'node')   &lt;-- this triggered the error
+
+
+	at org.spockframework.mock.runtime.MockInteraction.accept(MockInteraction.java:73)
+	at org.spockframework.mock.runtime.MockInteractionDecorator.accept(MockInteractionDecorator.java:46)
+	at org.spockframework.mock.runtime.InteractionScope$1.accept(InteractionScope.java:41)
+	at org.spockframework.mock.runtime.MockController.handle(MockController.java:39)
+	at org.spockframework.mock.runtime.JavaMockInterceptor.intercept(JavaMockInterceptor.java:72)
+	at org.spockframework.mock.runtime.DynamicProxyMockInterceptorAdapter.invoke(DynamicProxyMockInterceptorAdapter.java:28)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.copyFileList(CopyFileNodeStepPlugin.java:207)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPlugin.executeNodeStep(CopyFileNodeStepPlugin.java:113)
+	at com.dtolabs.rundeck.plugin.copyfile.CopyFileNodeStepPluginSpec.copy recursive #recursive with pattern #pattern(CopyFileNodeStepPluginSpec.groovy:165)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">copy recursive dir</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">copy recursive false with pattern *</td>
+<td class="success">0.045s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive false with pattern **</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">copy recursive false with pattern **/sub2</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive false with pattern **/test*</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">copy recursive false with pattern *.txt</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">copy recursive false with pattern */sub2</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive false with pattern sub*/*</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">copy recursive false with pattern sub1</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">copy recursive true with pattern *</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive true with pattern **</td>
+<td class="failures">0.010s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive true with pattern **/sub2</td>
+<td class="failures">0.007s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive true with pattern **/test*</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">copy recursive true with pattern *.txt</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive true with pattern */sub2</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">copy recursive true with pattern sub*/sub*</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">copy recursive true with pattern sub1</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">copy single file</td>
+<td class="success">0.206s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.0.1</a> at 14/02/2020 18:31:38</p>
+</div>
+</div>
+</body>
+</html>
